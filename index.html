@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random This or That Question Generator</title>
 </head>
+
 <body>
     <p id="questionP">...</p>
     <button onclick="getQuestionButtonClick()">Get random this or that question</button>
@@ -14,8 +16,17 @@
     <br>
     <br>
     <hr>
+    <div id="history" style="display: none;">
     <p>Previously displayed questions:</p>
     <ul id="previouslyDisplayedQuestionsList"></ul>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <button onclick="clearHistory()">Clear history</button>
+    <p><i>*You may get a previously displayed question again if you clear the history</i></p>
+    </div>
     <script src="./scripts.js"></script>
 </body>
+
 </html>

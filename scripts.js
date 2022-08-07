@@ -43,8 +43,14 @@ function pickRandomQuestionThatHasntBeenPickedBefore(questionCount) {
 function updatePreviouslyDisplayedQuestionsList() {
     previouslyDisplayedQuestionIds = JSON.parse(localStorage.getItem("previouslyDisplayedQuestionIds"));
 
-    if (!previouslyDisplayedQuestionIds[0])
+    if (!previouslyDisplayedQuestionIds[0]){
         return;
+    }
+    else{
+        console.log("display");
+        document.getElementById("history").style.display = "block";
+    }
+        
 
     let previouslyDisplayedQuestionsList = document.getElementById("previouslyDisplayedQuestionsList");
     previouslyDisplayedQuestionsList.innerHTML = "";
