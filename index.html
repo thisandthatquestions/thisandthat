@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random This or That Question Generator</title>
+</head>
+
+<body>
+    <br>
+    <h2 id="question">...</h2>
+    <button onclick="getQuestionButtonClick()">Get a random this or that question</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div id="history" style="display: none;">
+        <p>Previously displayed questions:</p>
+        <ul id="previouslyDisplayedQuestionsList"></ul>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <button onclick="clearHistory()">Clear history</button>
+        <p><i>*You may get a previously displayed question again if you clear the history.</i></p>
+    </div>
+    <div style="text-align: right;"><a href="https://github.com/thisorthatquestions/thisorthat" target="_blank">github</a></div>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
