@@ -22,7 +22,7 @@ function getQuestionButtonClick() {
     questionCount = questions.length;
     const randomlyPickedQuestionId = pickRandomQuestionThatHasntBeenPickedBefore(questionCount);
     const questionToDisplay = questions.find(q => { return q.Id === randomlyPickedQuestionId }).Question;
-    document.getElementById("questionP").innerHTML = questionToDisplay;
+    document.getElementById("question").innerHTML = questionToDisplay;
 }
 
 function updatePreviouslyDisplayedQuestionsInLocalStorage() {
@@ -60,4 +60,9 @@ function updatePreviouslyDisplayedQuestionsList() {
         li.appendChild(document.createTextNode(questions.find(q => { return q.Id === id }).Question));
         previouslyDisplayedQuestionsList.appendChild(li);
     }
+}
+
+function clearHistory(){
+    localStorage.setItem("previouslyDisplayedQuestionIds", JSON.stringify([]));
+    location.reload();
 }
